@@ -1,0 +1,18 @@
+header{
+    background:linear-gradient(90deg, #05a 10%, #21b3b2 90%);
+    height:200px;
+
+}
+
+footer{
+    background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8)) ;
+    height: 150px;
+}
+
+body{
+    background:rgb(243, 243, 243);
+}
+
+textarea {
+    resize: none;
+}

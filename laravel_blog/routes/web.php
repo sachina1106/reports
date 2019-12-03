@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('report', function () {
-    echo 'こん';
+Route::group(['prefix' => 'report', 'as' => 'report.'], function () {
+    Route::get('/', 'ReportsController@index')->name('index');
+    Route::get('create', 'ReportsController@create')->name('create');
+    Route::post('store', 'ReportsController@store')->name('store');
+    Route::get('show/{id}', 'ReportsController@show')->name('show');
 });
