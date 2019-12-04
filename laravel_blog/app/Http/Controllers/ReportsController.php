@@ -40,4 +40,26 @@ class ReportsController extends Controller
 
         return view('report.show', compact('report'));
     }
+
+    public function edit($id)
+    {
+        $report = $this->report->find($id);
+
+        return view('report.edit', compact('report'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $input = $request->all();
+        $this->report->find($id)->fill($input)->save();
+
+        return redirect()->route('report.index');
+    }
+
+    public function destroy($id)
+    {
+        $this->report->find($id)->delete();
+
+        return redirect()->route('report.index');
+    }
 }

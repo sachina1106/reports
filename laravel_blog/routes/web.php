@@ -19,4 +19,7 @@ Route::group(['prefix' => 'report', 'as' => 'report.'], function () {
     Route::get('create', 'ReportsController@create')->name('create');
     Route::post('store', 'ReportsController@store')->name('store');
     Route::get('show/{id}', 'ReportsController@show')->name('show');
+    Route::get('edit/{id}', 'ReportsController@edit')->name('edit');
+    Route::PUT('update/{id}', 'ReportsController@update')->name('update');
+    Route::get('destroy/{id}', 'ReportsController@destroy')->name('destroy');
 });

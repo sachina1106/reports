@@ -1,3 +1,3 @@
-<div class="col-4 bg-light py-5">
+<div class="col-2 bg-light py-5 ml-3">
         サイドバー
     </div>

@@ -9,9 +9,9 @@
     <thead>
         <tr>
             <!-- <th scope="col">#</th> -->
-            <th scope="col" >タイトル</th>
-            <th scope="col" >内容</th>
-            <th scope="col" ></th>
+            <th scope="col">タイトル</th>
+            <th scope="col">内容</th>
+            <th scope="col"></th>
 
         </tr>
     </thead>
@@ -23,7 +23,7 @@
             <td>{{$report->contents}}</td>
             <td class="text-right"><a href="{{route('report.show',['id'=>$report->id])}}" class="btn btn-info">詳細</a></td>
         </tr>
-     @endforeach
+        @endforeach
     </tbody>
 </table>
 @endsection
