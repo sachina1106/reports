@@ -19,15 +19,15 @@
                 </header>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center my-5">
             <div class="col-7 bg-light py-5 px-5">
                 @yield('content')
             </div>
         @include('layouts.parts.sidebar')
         </div>
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-12">
-                <footer class="fixed-bottom">
+                <footer>
                 </footer>
             </div>
         </div>

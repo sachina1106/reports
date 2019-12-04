@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\ReportsRequest;
 use App\Report;
 
 class ReportsController extends Controller
@@ -26,7 +26,7 @@ class ReportsController extends Controller
         return view('report.create');
     }
 
-    public function store(Request $request)
+    public function store(ReportsRequest $request)
     {
         $input = $request->all();
         $this->report->fill($input)->save();
@@ -48,7 +48,7 @@ class ReportsController extends Controller
         return view('report.edit', compact('report'));
     }
 
-    public function update(Request $request, $id)
+    public function update(ReportsRequest $request, $id)
     {
         $input = $request->all();
         $this->report->find($id)->fill($input)->save();
