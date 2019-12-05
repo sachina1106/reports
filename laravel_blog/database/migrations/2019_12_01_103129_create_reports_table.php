@@ -13,8 +13,8 @@ class CreateReportsTable extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('contents');
+            $table->string('title', 50);
+            $table->string('contents', 1000);
             $table->timestamps();
         });
     }
