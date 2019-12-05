@@ -16,7 +16,7 @@ class ReportsController extends Controller
 
     public function index()
     {
-        $reports = $this->report->all();
+        $reports = $this->report->paginate(10);
 
         return view('report.index', compact('reports'));
     }
